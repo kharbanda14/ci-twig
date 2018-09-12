@@ -525,4 +525,4 @@ $config['proxy_ips'] = '';
 $config['cache_twig'] = false;
 $config['twig_cache_path'] = APPPATH . 'cache';
 $config['twig_templates'] = APPPATH . 'views';
-
+$config['twig_debug'] = TRUE;

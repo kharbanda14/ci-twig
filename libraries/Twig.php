@@ -16,7 +16,9 @@ class Twig extends CI_Loader
         if ($cache_templates) {
             $twig_env['cache'] = $this->CI->config->item('twig_cache_path');
         }
+        $twig_env['debug'] = $this->CI->config->item('twig_debug');
         $twig = new Twig_Environment($loader, $twig_env);
+        $twig->addExtension(new Twig_Extension_Debug());
         foreach ($this->twig_globals() as $key => $value) {
             $twig->addGlobal($key, $value);
         }
